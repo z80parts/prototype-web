@@ -24,12 +24,11 @@ public class Application {
 		return characterEncodingFilter;
 	}
 
-	@Bean
-	public RestTemplate getRestTemplate() {
-		
-		RestTemplateBuilder restTemplateBuilder = new RestTemplateBuilder();
-        return restTemplateBuilder.build();
-//		return new RestTemplate();
-	}
+  @Bean
+  public RestTemplate getRestTemplate() {
+
+    RestTemplateBuilder restTemplateBuilder = new RestTemplateBuilder();
+    return restTemplateBuilder.build();
+  }
 
 }
