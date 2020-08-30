@@ -1,4 +1,4 @@
-package web;
+package jp.prototype.web;
 
 import java.nio.charset.StandardCharsets;
 

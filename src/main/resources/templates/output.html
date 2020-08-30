@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<link href="css/styles.css" rel="stylesheet" />
+<title>Spring Boot Application</title>
+</head>
+<body>
+	<div>
+		<span th:text="*{echoForm.text}">入力値：</span>
+	</div>
+	<div>
+		<button type="submit">送信</button>
+	</div>
+</body>
+</html>

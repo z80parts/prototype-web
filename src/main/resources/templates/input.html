@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<link href="css/styles.css" rel="stylesheet" />
+<title>Spring Boot Application</title>
+</head>
+<body>
+	<form th:action="@{/echo}" th:object="$form/inputForm" method="POST">
+		<div>
+			<input type="text" name="text" id="text" th:field="*{text}"
+				th:errorClass="fieldError" /> <span
+				th:if="${#fields.hasError('text')}" th:errors="*{text}"> エラー</span>
+		</div>
+		<div>
+			<button type="submit">送信</button>
+		</div>
+	</form>
+</body>
+</html>
