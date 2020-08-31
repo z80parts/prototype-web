@@ -12,7 +12,6 @@ import jp.prototype.common.model.Company;
 import jp.prototype.common.service.CompanyService;
 import lombok.AllArgsConstructor;
 
-
 @AllArgsConstructor
 @Controller
 public class WebController {
