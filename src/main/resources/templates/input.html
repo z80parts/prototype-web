@@ -7,11 +7,9 @@
 <title>Spring Boot Application</title>
 </head>
 <body>
-	<form th:action="@{/echo}" th:object="$form/inputForm" method="POST">
+	<form th:action="@{/echo}" th:object="${inputForm}" method="POST">
 		<div>
-			<input type="text" name="text" id="text" th:field="*{text}"
-				th:errorClass="fieldError" /> <span
-				th:if="${#fields.hasError('text')}" th:errors="*{text}"> エラー</span>
+			<input type="text" name="text" id="text" th:field="*{text}" /><span th:if="${#fields.hasErrors('text')}" th:errors="*{text}"> エラー</span>
 		</div>
 		<div>
 			<button type="submit">送信</button>
