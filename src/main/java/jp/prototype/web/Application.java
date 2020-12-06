@@ -12,8 +12,8 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.filter.CharacterEncodingFilter;
 
 @SpringBootApplication(scanBasePackages = { "jp.prototype" })
-@EnableJpaRepositories(basePackages = { "jp.prototype.common.repository" })
-@EntityScan(basePackages = { "jp.prototype.common.model" })
+@EnableJpaRepositories(basePackages = { "jp.prototype.domain.repository" })
+@EntityScan(basePackages = { "jp.prototype.domain.model" })
 public class Application {
 
   public static void main(String[] args) {

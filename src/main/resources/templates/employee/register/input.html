@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Companies</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+	<h2>Registration of employee</h2>
+	<form th:action="@{/employee/register/confirm}" th:object="${employeeForm}" method="POST">
+			名前：<input type="text" name="name" id="name" th:field="*{name}" />
+			<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"> エラー</span><br />
+			<button type="submit">送信</button>
+	</form>
+</body>
+</html>
