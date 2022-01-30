@@ -21,7 +21,9 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import web.model.User;
+import jp.prototype.web.model.User;
+import jp.prototype.web.tmp.OrderService;
+import jp.prototype.web.tmp.ProductService;
 
 @ExtendWith(MockitoExtension.class)
 public class MockitoDemoApplicationTests {

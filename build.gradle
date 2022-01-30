@@ -7,17 +7,26 @@ plugins {
 	id 'maven-publish'
 }
 
-group = 'web'
+group = 'jp.prototype'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
 repositories {
+	mavenLocal()
 	mavenCentral()
 }
 
 dependencies {
+	implementation 'jp.prototype:prototype-domain:0.0.1-SNAPSHOT'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 //	runtimeOnly 'com.h2database:h2:1.4.200'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
