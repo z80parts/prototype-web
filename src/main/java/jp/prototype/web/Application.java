@@ -13,29 +13,29 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.filter.CharacterEncodingFilter;
 
 @SpringBootApplication
-@ComponentScan(basePackages={"jp.prototype.web","jp.prototype.domain"})
+@ComponentScan(basePackages = { "jp.prototype.web", "jp.prototype.domain" })
 @EntityScan("jp.prototype.domain.model")
 @EnableJpaRepositories("jp.prototype.domain.repository")
 public class Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(Application.class, args);
+  }
 
-	@Bean
-	public CharacterEncodingFilter characterEncodingFilter() {
-		final CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
-		characterEncodingFilter.setEncoding(StandardCharsets.UTF_8.name());
-		characterEncodingFilter.setForceEncoding(true);
-		return characterEncodingFilter;
-	}
+  @Bean
+  public CharacterEncodingFilter characterEncodingFilter() {
+    final CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
+    characterEncodingFilter.setEncoding(StandardCharsets.UTF_8.name());
+    characterEncodingFilter.setForceEncoding(true);
+    return characterEncodingFilter;
+  }
 
-	@Bean
-	public RestTemplate getRestTemplate() {
-		
-		RestTemplateBuilder restTemplateBuilder = new RestTemplateBuilder();
-        return restTemplateBuilder.build();
-//		return new RestTemplate();
-	}
+  @Bean
+  public RestTemplate getRestTemplate() {
+
+    RestTemplateBuilder restTemplateBuilder = new RestTemplateBuilder();
+    return restTemplateBuilder.build();
+//    return new RestTemplate();
+  }
 
 }
