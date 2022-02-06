@@ -28,7 +28,7 @@ public class QuarterResultController {
 
 //    QuarterResult entity = new QuarterResult();
 //    Page<QuarterResult> page = service.find(entity, pageable);
-    Page<QuarterResult> page = service.findAll(0, 30);
+    Page<QuarterResult> page = service.findAll(pageable.getPageNumber(), 30);
     model.addAttribute("page", page);
     model.addAttribute("quaterResults", page.getContent());
     return "/quarter_result/search";

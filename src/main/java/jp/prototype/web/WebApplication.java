@@ -16,10 +16,10 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 @ComponentScan(basePackages = { "jp.prototype.web", "jp.prototype.domain" })
 @EntityScan("jp.prototype.domain.model")
 @EnableJpaRepositories("jp.prototype.domain.repository")
-public class Application {
+public class WebApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(Application.class, args);
+    SpringApplication.run(WebApplication.class, args);
   }
 
   @Bean
