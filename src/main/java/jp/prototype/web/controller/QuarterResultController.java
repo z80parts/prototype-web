@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jp.prototype.domain.model.QuarterResult;
 import jp.prototype.domain.service.QuarterResultService;
@@ -16,9 +17,15 @@ import lombok.AllArgsConstructor;
 @RequestMapping("/quarter_result")
 @AllArgsConstructor
 @Controller
+@SessionAttributes(types = QuarterResultSearchForm.class)
 public class QuarterResultController {
 
   private QuarterResultService service;
+
+  @ModelAttribute("quarterResultSearchForm")
+  public QuarterResultSearchForm setUpForm() {
+    return new QuarterResultSearchForm();
+  }
 
   @GetMapping("/")
   String index(Model model, Pageable pageable) {

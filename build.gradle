@@ -40,10 +40,9 @@ test {
 }
 
 java {
-//	withJavadocJar()
+	withJavadocJar()
 	withSourcesJar()
 }
-
 publishing {
 	publications {
 		mavenJava(MavenPublication) {

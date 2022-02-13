@@ -46,12 +46,12 @@
 					<li class="page-item"
 						th:classappend="${page.first} ? 'disabled':''"><a
 						class="page-link"
-						th:href="@{${url}(code=*{code}, name=*{name}, page=0)}">First</a>
+						th:href="@{${url}(page=0)}">First</a>
 					</li>
 					<li class="page-item"
 						th:classappend="${page.number} == 0 ? 'disabled':''"><a
 						class="page-link"
-						th:href="@{${url}(code=*{code}, name=*{name}, page=${page.number-1})}">Prev</a>
+						th:href="@{${url}(page=${page.number-1})}">Prev</a>
 					</li>
 					<th:block th:if="${page.totalPages} < 5">
 						<li class="page-item" th:each='i : ${#numbers.sequence(0, page.totalPages - 1)}'
@@ -59,7 +59,7 @@
 							style="display: inline"><span class="page-link"
 							th:if='${i}==${page.number}' th:text='${i+1}'>1</span> <a
 							class="page-link" th:if='${i}!=${page.number}'
-							th:href="@{${url}(code=*{code}, name=*{name}, page=${i})}"> <span
+							th:href="@{${url}(page=${i})}"> <span
 								th:text='${i+1}'>1</span></a></li>
 					</th:block>
 					<th:block th:if="5 <= ${page.totalPages}">
@@ -69,7 +69,7 @@
 								style="display: inline"><span class="page-link"
 								th:if='${i}==${page.number}' th:text='${i+1}'>1</span> <a
 								class="page-link" th:if='${i}!=${page.number}'
-								th:href="@{${url}(code=*{code}, name=*{name}, page=${i})}">
+								th:href="@{${url}(page=${i})}">
 									<span th:text='${i+1}'>1</span>
 							</a></li>
 						</th:block>
@@ -81,7 +81,7 @@
 								style="display: inline"><span class="page-link"
 								th:if='${i}==${page.number}' th:text='${i+1}'>1</span> <a
 								class="page-link" th:if='${i}!=${page.number}'
-								th:href="@{${url}(code=*{code}, name=*{name}, page=${i})}">
+								th:href="@{${url}(page=${i})}">
 									<span th:text='${i+1}'>1</span>
 							</a></li>
 						</th:block>
@@ -92,7 +92,7 @@
 								style="display: inline"><span class="page-link"
 								th:if='${i}==${page.number}' th:text='${i+1}'>1</span> <a
 								class="page-link" th:if='${i}!=${page.number}'
-								th:href="@{${url}(code=*{code}, name=*{name}, page=${i})}">
+								th:href="@{${url}(page=${i})}">
 									<span th:text='${i+1}'>1</span>
 							</a></li>
 						</th:block>
