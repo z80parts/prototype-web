@@ -2,34 +2,34 @@ package jp.prototype.web.model;
 
 public class User {
 
-	private String id;
-	
-	private String name;
-	
-	private int age;
+  private String id;
 
-	public String getId() {
-		return id;
-	}
+  private String name;
 
-	public void setId(String id) {
-		this.id = id;
-	}
+  private int age;
 
-	public String getName() {
-		return name;
-	}
+  public String getId() {
+    return id;
+  }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  public void setId(String id) {
+    this.id = id;
+  }
 
-	public int getAge() {
-		return age;
-	}
+  public String getName() {
+    return name;
+  }
 
-	public void setAge(int age) {
-		this.age = age;
-	}
-	
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
 }

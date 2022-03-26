@@ -2,34 +2,34 @@ package jp.prototype.web.model;
 
 public class Result {
 
-	private String status;
-	
-	private String errorMsg;
-	
-	private String date;
+  private String status;
 
-	public String getStatus() {
-		return status;
-	}
+  private String errorMsg;
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+  private String date;
 
-	public String getErrorMsg() {
-		return errorMsg;
-	}
+  public String getStatus() {
+    return status;
+  }
 
-	public void setErrorMsg(String errorMsg) {
-		this.errorMsg = errorMsg;
-	}
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
-	public String getDate() {
-		return date;
-	}
+  public String getErrorMsg() {
+    return errorMsg;
+  }
 
-	public void setDate(String date) {
-		this.date = date;
-	}
-	
+  public void setErrorMsg(String errorMsg) {
+    this.errorMsg = errorMsg;
+  }
+
+  public String getDate() {
+    return date;
+  }
+
+  public void setDate(String date) {
+    this.date = date;
+  }
+
 }

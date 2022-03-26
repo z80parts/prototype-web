@@ -8,11 +8,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class ExceptionController {
 
-	@ExceptionHandler(value = CustomRuntimeException.class)
-	public ResponseEntity<Object> exception(CustomRuntimeException exception) {
+  @ExceptionHandler(value = CustomRuntimeException.class)
+  public ResponseEntity<Object> exception(CustomRuntimeException exception) {
 
-		return new ResponseEntity<>("RuntimeError occured!",
-				HttpStatus.EXPECTATION_FAILED);
-	}
+    return new ResponseEntity<>("RuntimeError occured!", HttpStatus.EXPECTATION_FAILED);
+  }
 
 }

@@ -28,7 +28,8 @@ public class QuarterResultController {
   }
 
   @GetMapping("/")
-  String index(Model model, Pageable pageable) {
+  String index(@ModelAttribute("quarterResultSearchForm") QuarterResultSearchForm form,
+          Model model, Pageable pageable) {
     return "/quarter_result/search";
   }
 
